@@ -92,8 +92,8 @@ Creates support tickets for customer issues, associates tickets with verified cu
 ### 1. Clone the repository
 
 ```bash
-git clone <your-github-repository-url>
-cd ai-customer-support-agent
+git clone https://github.com/BARAD-IDRISH/AI-Customer-Support-Agent.git
+cd AI-Customer-Support-Agent
 ```
 
 Alternatively, open a terminal in the existing project directory.
