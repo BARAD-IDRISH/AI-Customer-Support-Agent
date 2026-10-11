@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
+    <title>SupportAI | Customer Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <div>
+                    <h1>SupportAI</h1>
+                    <p>Customer assistance</p>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <span class="section-label">YOUR ASSISTANT</span>
+                <div class="assistant-card">
+                    <div class="assistant-avatar">AI</div>
+                    <div>
+                        <strong>Support Assistant</strong>
+                        <p><span class="online-dot"></span> Available to help</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section help-section">
+                <span class="section-label">I CAN HELP WITH</span>
+                <div class="help-item"><span>↗</span> Order tracking</div>
+                <div class="help-item"><span>↻</span> Refund eligibility</div>
+                <div class="help-item"><span>＋</span> Support tickets</div>
+                <div class="help-item"><span>?</span> Product questions</div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="secure-icon">✓</div>
+                <div>
+                    <strong>Support made simple</strong>
+                    <p>Ask a question to get started.</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-layout">
+            <header class="topbar">
+                <div class="mobile-brand">
+                    <div class="brand-icon">S</div>
+                    <strong>SupportAI</strong>
+                </div>
+                <div class="header-title">
+                    <h2>Customer Support</h2>
+                    <p>AI-powered assistance for your orders</p>
+                </div>
+                <div class="header-status">
+                    <span class="online-dot"></span>
+                    <span>Online</span>
+                </div>
+            </header>
+
+            <section class="chat-content">
+                <div class="welcome-block" id="welcome">
+                    <div class="welcome-icon">✦</div>
+                    <span class="eyebrow">YOUR PERSONAL SUPPORT ASSISTANT</span>
+                    <h2>How can we help<br>you today?</h2>
+                    <p>Ask about an order, check refund eligibility, or get help with an issue.</p>
+
+                    <div class="suggestion-grid">
+                        <button class="suggestion" data-message="Can you help me check my order status?">
+                            <span class="suggestion-icon">↗</span>
+                            <span><strong>Track an order</strong><small>Find your latest order status</small></span>
+                            <span class="suggestion-arrow">→</span>
+                        </button>
+                        <button class="suggestion" data-message="How can I check whether my order is eligible for a refund?">
+                            <span class="suggestion-icon">↻</span>
+                            <span><strong>Refund information</strong><small>Understand refund eligibility</small></span>
+                            <span class="suggestion-arrow">→</span>
+                        </button>
+                        <button class="suggestion" data-message="I need help creating a support ticket.">
+                            <span class="suggestion-icon">＋</span>
+                            <span><strong>Get support</strong><small>Get help with a problem</small></span>
+                            <span class="suggestion-arrow">→</span>
+                        </button>
+                        <button class="suggestion" data-message="What information do you need to help me with an order?">
+                            <span class="suggestion-icon">?</span>
+                            <span><strong>Ask a question</strong><small>Learn how we can help</small></span>
+                            <span class="suggestion-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="messages" id="messages" aria-live="polite"></div>
+            </section>
+
+            <footer class="composer-area">
+                <form id="chat-form" class="composer">
+                    <textarea
+                        id="message-input"
+                        name="message"
+                        placeholder="Describe your issue or ask a question..."
+                        rows="1"
+                        maxlength="4000"
+                        aria-label="Your message"
+                        required
+                    ></textarea>
+                    <button type="submit" id="send-button" aria-label="Send message">
+                        <span>Send</span>
+                        <span class="send-icon">↑</span>
+                    </button>
+                </form>
+                <div class="composer-note">
+                    <span>AI responses may occasionally be inaccurate.</span>
+                    <span id="char-count">0 / 4000</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}" defer></script>
+</body>
+</html>
